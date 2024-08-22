@@ -8,13 +8,48 @@
 
 <body>
 	<div class="container">
-		<h2>Your Booking Details</h2><label>Pick up Date:</label><input id="dateInput" required=""  type="date"><br>
+		<h2>Your Booking Details</h2><br>
+		<label>Pick up Date:</label><input id="dateInput" required=""  type="date"><br>
 		<br>
 		<label>Amount of Hours</label><input id="hoursInput" max="6" min="3" required="" type="number" placeholder="3"><br>
 		<br>
 		<label>Amount of Attenders</label><input id="guestInput" max="50" min="1" required="" type="number" placeholder="23"><br>
 		<br>
-		<label>Occasion for Booking<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Wedding Celebration"></label><br>
+		<label>Occasion for Booking<input id="reasonInput" autocomplete="given-name" pattern="{2,200}" required="" type="text" placeholder="Wedding Celebration"></label><br>
+		
+		<br><h2>Reservation</h2><br>
+		<div class="row">
+			<div class="column">
+				<div class="card" data-price="249" data-value="Executive Suite">
+					<h3>Executive Suite</h3><img src="images/brunch_charter.jpg">
+					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card" data-price="289" data-value="Family Suite">
+					<h3>Family Suite</h3><img src="images/day time.jpg">
+					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card" data-price="329" data-value="Two Bedroom Suite">
+					<h3>Bedroom Suite</h3><img src="images/night.jpg">
+					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
+				</div>
+			</div>
+		</div><br>
+		
+		<br><h2>Your Booking Details</h2><br>
+		<label>First Name:<input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br>
+		<br>
+		<label>Last Name:<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Smith" title="Please enter in your first name"></label><br>
+		<br>
+		<label>Nz Drivers License:<input id="licenseInut" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
+		<br>
+		<label>Cellphone:<input id="cellphoneInput" pattern={3,12} required="" type="number" placeholder="027XXXXXX"  title="Please enter in your phone number"></label><br>
+		<br>
+		<label>Email Address:</label><input id="emailInput" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address" >
+		<br>
 	</div>
 	
 	<script src="3.7.js"></script>
