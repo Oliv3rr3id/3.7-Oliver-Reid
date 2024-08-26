@@ -1,17 +1,25 @@
 @charset "utf-8";
 /* CSS Document */
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  font-family: 'Poppins', sans-serif;
+#termsAndConditions{
+	height: 40px;
+	width: 40px;
 }
 
 img{
 	width: 180px;
 	height: 140px;
-	 border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+table{
+	border: 1px solid #ddd;
+  	padding: 8px;
+	width:60%;
+	margin:auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  	background-color: #f1f1f1;
 }
 
 body {
@@ -27,7 +35,6 @@ input:invalid {
   border-radius: 5px;
 }
 
-/*this*/
 input:valid {
   background-color: #C8FCD2;
   border: none;
@@ -50,6 +57,21 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+}
+
+.submitButton{
+	width: 100%;
+	height: 45px;
+	background-color: #C8FCD2;
+	border-radius: 5px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  place-items: center;
 }
 
 /* Float four columns side by side */
@@ -91,14 +113,14 @@ textarea {
 	width: 100%;
 	height: 33px;
 	background-color: #C8FCD2;
-	  border: none;
-  outline: 2px solid green;
-  border-radius: 5px;
+	border: none;
+    outline: 2px solid green;
+    border-radius: 5px;
 }
 
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .column {
     width: 100%;
     display: block;

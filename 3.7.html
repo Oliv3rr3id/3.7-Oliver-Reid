@@ -17,39 +17,110 @@
 		<br>
 		<label>Occasion for Booking<input id="reasonInput" autocomplete="given-name" pattern="{2,200}" required="" type="text" placeholder="Wedding Celebration"></label><br>
 		
+		<br><h2>Your Extras</h2><br>
+		<label class="container"><input class="extrasCheckbox" data-price="40" type="checkbox"> Unlimited Drinks Package $2000</label><span class="checkmark"></span><br>
+		<br>
+		<label class="container"><input class="extrasCheckbox" data-price="60" type="checkbox"> Catered Snacks $350</label><span class="checkmark"></span><br>
+		<br>
+		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> DJ $350</label><span class="checkmark"></span><br>
+		<br>
+		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> BYO Food $50</label><span class="checkmark"></span><br>
+		<br>
+		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> Cake $60</label><span class="checkmark"></span><br>
+		<br>
+		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> Overnight Experience $650</label><span class="checkmark"></span><br>
+		<br>
+		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> Fairy Lights $30</label><span class="checkmark"></span><br>
+		<br>
+		
 		<br><h2>Reservation</h2><br>
 		<div class="row">
 			<div class="column">
 				<div class="card" data-price="249" data-value="Executive Suite">
-					<h3>Executive Suite</h3><img src="images/brunch_charter.jpg">
+					<h3>11am Brunch Charter</h3><img src="images/brunch_charter.jpg">
 					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
 				</div>
 			</div>
 			<div class="column">
 				<div class="card" data-price="289" data-value="Family Suite">
-					<h3>Family Suite</h3><img src="images/day time.jpg">
+					<h3>3pm Afternoon Delight</h3><img src="images/day time.jpg">
 					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
 				</div>
 			</div>
 			<div class="column">
 				<div class="card" data-price="329" data-value="Two Bedroom Suite">
-					<h3>Bedroom Suite</h3><img src="images/night.jpg">
+					<h3> 7pm Sunset Sailing</h3><img src="images/night.jpg">
 					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
 				</div>
 			</div>
 		</div><br>
 		
-		<br><h2>Your Booking Details</h2><br>
+		<br><h2>Your Personal Details</h2><br>
 		<label>First Name:<input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br>
 		<br>
 		<label>Last Name:<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Smith" title="Please enter in your first name"></label><br>
 		<br>
+		<label>Age:<input id="ageInut" min="25" max="130" required="" type="number" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
+		<br>
 		<label>Nz Drivers License:<input id="licenseInut" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
 		<br>
-		<label>Cellphone:<input id="cellphoneInput" pattern={3,12} required="" type="number" placeholder="027XXXXXX"  title="Please enter in your phone number"></label><br>
+		<label>Cellphone:<input id="cellphoneInput" required="" type="number" placeholder="027XXXXXX"  title="Please enter in your phone number"></label><br>
 		<br>
 		<label>Email Address:</label><input id="emailInput" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address" >
 		<br>
+
+		<br><h2>Reservation Summary</h2><br>
+		<table>
+			<tr>
+				<td>Pick up Date</td>
+				<td>
+					<div id="outDate"></div>
+				</td>
+			</tr>
+			<tbody>
+				<tr>
+					<td>Amount of Hours</td>
+					<td>
+						<div id="outNights"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>Reservation</td>
+					<td>
+						<div id="outRoom"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>Cost of Reservation</td>
+					<td>
+						<div id="outPrice"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>Extras</td>
+					<td>
+						<div id="outExtras"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>Cost of Extras</td>
+					<td>
+						<div id="outrice"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>Cost of Entier Reservation</td>
+					<td>
+						<div id="outTotal"></div>
+					</td>
+				</tr>
+			</tbody>
+		</table><br>
+		
+	<br><h2>Do you agree to our terms and conditions?</h2><br>
+	<input id="termsAndConditions" type="checkbox"><br>
+	<br>
+	<br><button class="submitButton" onclick="checkInputs()" type="button">Submit Reservation</button>
 	</div>
 	
 	<script src="3.7.js"></script>
