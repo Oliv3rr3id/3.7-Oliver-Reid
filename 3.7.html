@@ -18,39 +18,39 @@
 		<label>Occasion for Booking<input id="reasonInput" autocomplete="given-name" pattern="{2,200}" required="" type="text" placeholder="Wedding Celebration"></label><br>
 		
 		<br><h2>Your Extras</h2><br>
-		<label class="container"><input class="extrasCheckbox" data-price="40" type="checkbox"> Unlimited Drinks Package $2000</label><span class="checkmark"></span><br>
+		<label class="container"><input class="extrasCheckbox" data-price="2000" type="checkbox"> Unlimited Drinks Package $2000</label><span class="checkmark"></span><br>
 		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="60" type="checkbox"> Catered Snacks $350</label><span class="checkmark"></span><br>
+		<label class="container"><input class="extrasCheckbox" data-price="350" type="checkbox"> Catered Snacks $350</label><span class="checkmark"></span><br>
 		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> DJ $350</label><span class="checkmark"></span><br>
+		<label class="container"><input class="extrasCheckbox" data-price="350" type="checkbox"> DJ $350</label><span class="checkmark"></span><br>
 		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> BYO Food $50</label><span class="checkmark"></span><br>
+		<label class="container"><input class="extrasCheckbox" data-price="50" type="checkbox"> BYO Food $50</label><span class="checkmark"></span><br>
 		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> Cake $60</label><span class="checkmark"></span><br>
+		<label class="container"><input class="extrasCheckbox" data-price="60" type="checkbox"> Cake $60</label><span class="checkmark"></span><br>
 		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> Overnight Experience $650</label><span class="checkmark"></span><br>
+		<label class="container"><input class="extrasCheckbox" data-price="650" type="checkbox"> Overnight Experience $650</label><span class="checkmark"></span><br>
 		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="0" type="checkbox"> Fairy Lights $30</label><span class="checkmark"></span><br>
+		<label class="container"><input class="extrasCheckbox" data-price="30" type="checkbox"> Fairy Lights $30</label><span class="checkmark"></span><br>
 		<br>
 		
 		<br><h2>Reservation</h2><br>
 		<div class="row">
 			<div class="column">
-				<div class="card" data-price="249" data-value="Executive Suite">
-					<h3>11am Brunch Charter</h3><img src="images/brunch_charter.jpg">
-					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
+				<div class="card" data-price="249" data-value="11am Brunch Charter">
+					<h3> 11am Brunch Charter</h3><img src="images/brunch_charter.jpg">
+					<p>Some text</p><button class="bookBoat" type="button">Book Room</button>
 				</div>
 			</div>
 			<div class="column">
-				<div class="card" data-price="289" data-value="Family Suite">
-					<h3>3pm Afternoon Delight</h3><img src="images/day time.jpg">
-					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
+				<div class="card" data-price="289" data-value="3pm Afternoon Delight">
+					<h3> 3pm Afternoon Delight</h3><img src="images/day time.jpg">
+					<p>Some text</p><button class="bookBoat" type="button">Book Room</button>
 				</div>
 			</div>
 			<div class="column">
-				<div class="card" data-price="329" data-value="Two Bedroom Suite">
+				<div class="card" data-price="329" data-value="7pm Sunset Sailin">
 					<h3> 7pm Sunset Sailing</h3><img src="images/night.jpg">
-					<p>Some text</p><button class="bookRoom" type="button">Book Room</button>
+					<p>Some text</p><button class="bookBoat" type="button">Book Room</button>
 				</div>
 			</div>
 		</div><br>
@@ -60,9 +60,9 @@
 		<br>
 		<label>Last Name:<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Smith" title="Please enter in your first name"></label><br>
 		<br>
-		<label>Age:<input id="ageInut" min="25" max="130" required="" type="number" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
+		<label>Age:<input id="ageInut" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in your phone number"></label><br>
 		<br>
-		<label>Nz Drivers License:<input id="licenseInut" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
+		<label>Nz Drivers License:<input id="licenseInput" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
 		<br>
 		<label>Cellphone:<input id="cellphoneInput" required="" type="number" placeholder="027XXXXXX"  title="Please enter in your phone number"></label><br>
 		<br>
@@ -81,13 +81,13 @@
 				<tr>
 					<td>Amount of Hours</td>
 					<td>
-						<div id="outNights"></div>
+						<div id="outHours"></div>
 					</td>
 				</tr>
 				<tr>
 					<td>Reservation</td>
 					<td>
-						<div id="outRoom"></div>
+						<div id="outTime"></div>
 					</td>
 				</tr>
 				<tr>
@@ -105,7 +105,7 @@
 				<tr>
 					<td>Cost of Extras</td>
 					<td>
-						<div id="outrice"></div>
+						<div id="outExtrasPrice"></div>
 					</td>
 				</tr>
 				<tr>

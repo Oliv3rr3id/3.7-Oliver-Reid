@@ -59,7 +59,7 @@ textarea {
 	font-family: 'Poppins', sans-serif;
 }
 
-.submitButton{
+.submitButton, bookBoat{
 	width: 100%;
 	height: 45px;
 	background-color: #C8FCD2;
@@ -109,7 +109,7 @@ textarea {
   box-sizing: border-box;
 }
 
-.bookRoom{
+.bookBoat{
 	width: 100%;
 	height: 33px;
 	background-color: #C8FCD2;
