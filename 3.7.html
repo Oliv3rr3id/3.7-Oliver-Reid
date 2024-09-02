@@ -10,11 +10,14 @@
 	<div class="container">
 		<h2>Your Booking Details</h2><br>
 		<label>Pick up Date:</label><input id="dateInput" required=""  type="date"><br>
-		<br>
+		<div class="errorMessages" id="errorMessage1"></div><br>
+		
 		<label>Amount of Hours</label><input id="hoursInput" max="6" min="3" required="" type="number" placeholder="3"><br>
-		<br>
+		<div class="errorMessages" id="errorMessage2"></div><br>
+		
 		<label>Amount of Attenders</label><input id="guestInput" max="50" min="1" required="" type="number" placeholder="23"><br>
-		<br>
+		<div class="errorMessages" id="errorMessage3"></div><br>
+		
 		<label>Occasion for Booking<input id="reasonInput" autocomplete="given-name" pattern="{2,200}" required="" type="text" placeholder="Wedding Celebration"></label><br>
 		
 		<br><h2>Your Extras</h2><br>
@@ -60,7 +63,7 @@
 		<br>
 		<label>Last Name:<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Smith" title="Please enter in your first name"></label><br>
 		<br>
-		<label>Age:<input id="ageInut" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in your phone number"></label><br>
+		<label>Age:<input id="ageInput" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in your phone number"></label><br>
 		<br>
 		<label>Nz Drivers License:<input id="licenseInput" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
 		<br>
@@ -123,6 +126,7 @@
 	<br><button class="submitButton" onclick="checkInputs()" type="button">Submit Reservation</button>
 	</div>
 	
+	<script src="airtable.browser.js"></script>
 	<script src="3.7.js"></script>
 </body>
 	
