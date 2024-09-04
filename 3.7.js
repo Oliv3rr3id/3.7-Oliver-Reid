@@ -9,14 +9,14 @@ function boatBooking(){
 		document.getElementById("errorMessage1").innerHTML = "Please enter a valid date";
 		return;
 	} else {
-		document.getElementById("errorMessage1").innerHTML = "";
+		document.getElementById("errorMessage2").innerHTML = "";
 	}var amountOfHours = document.getElementById("hoursInput").value;
 	if (document.getElementById("hoursInput").validity.valueMissing ||document.getElementById("hoursInput").validity.rangeUnderflow ||document.getElementById("hoursInput").validity.rangeOverflow) {
 		alert("Please enter a valid amount");
 		document.getElementById("errorMessage2").innerHTML = "Please enter a valid amount of hours";
 		return;
 	} else {
-		document.getElementById("errorMessage2").innerHTML = "";
+		document.getElementById("errorMessage3").innerHTML = "";
 	}var amountofGuests = document.getElementById("guestInput").value;
 	if (document.getElementById("guestInput").validity.valueMissing ||document.getElementById("guestInput").validity.rangeUnderflow ||document.getElementById("guestInput").validity.rangeOverflow) {
 		alert("Please enter a valid amount");
@@ -41,18 +41,32 @@ function boatBooking(){
 			alert(costOfExtras);
 		}
 	}
-	totalCost += Number(costofReservation) + Number(costOfExtras);
-	outDate.innerHTML = checkInDate;
-	outHours.innerHTML = amountOfHours;
-	outTime.innerHTML = boatTime;
-	outPrice.innerHTML = "$" + costofReservation;
-	outExtras.innerHTML = extrasOption;
-	outExtrasPrice.innerHTML = "$" + costOfExtras;
-	outTotal.innerHTML = totalCost;
-	checkInputs(checkInDate, amountOfHours, boatTime, costofReservation, extrasOption, costOfExtras)
+	var bookingData = {
+        checkInDate: checkInDate,
+        amountOfHours: amountOfHours,
+        amountofGuests: amountofGuests,
+        boatTime: boatTime,
+        costofReservation: costofReservation,
+        extrasOption: extrasOption,
+        costOfExtras: costOfExtras,
+        totalCost: totalCost
+    };
+
+    outputSummary(bookingData);
+    return bookingData;
 }
 
-function checkInputs(checkInDate, amountOfHours, boatTime, costofReservation, extrasOption, costOfExtras){
+function outputSummary(bookingData){
+	document.getElementById("outDate").innerHTML = bookingData.checkInDate;
+    document.getElementById("outHours").innerHTML = bookingData.amountOfHours;
+    document.getElementById("outTime").innerHTML = bookingData.boatTime;
+    document.getElementById("outPrice").innerHTML = "$" + bookingData.costofReservation;
+    document.getElementById("outExtras").innerHTML = bookingData.extrasOption.join(', ');
+    document.getElementById("outExtrasPrice").innerHTML = "$" + bookingData.costOfExtras;
+    document.getElementById("outTotal").innerHTML = "$" + bookingData.totalCost;
+}
+
+function checkInputs(bookingData){
 	 if (termsAndConditions.checked) {
         alert("Terms box is checked");
     } else {
@@ -67,10 +81,10 @@ function checkInputs(checkInDate, amountOfHours, boatTime, costofReservation, ex
 	var email = document.getElementById('emailInput').value;
 	//store all of the customer details as variables
 	alert(firstName + " " + lastName + " " + age + " " + license + " " + cellPhone + " " + email);
-	pushData(firstName, lastName, age, license, cellPhone, email, checkInDate, amountOfHours, boatTime, costofReservation, extrasOption, costOfExtras)
+	pushData(firstName, lastName, age, license, cellPhone, email, bookingData)
 }
 
-function pushData(firstName, lastName, age, license, cellPhone, email, checkInDate, amountOfHours, boatTime, costofReservation, extrasOption, costOfExtras) {
+function pushData(firstName, lastName, age, license, cellPhone, email, bookingData) {
     alert("At the push data function - nearly done!");
     console.log("myFunction fired.");
     console.log("Getting Values....");
@@ -86,7 +100,8 @@ function pushData(firstName, lastName, age, license, cellPhone, email, checkInDa
 			"Age": age,
 			"License": license,
 			"Cell Phone": cellPhone,
-			"Email": email
+			"Email": email,
+			"Check In Date": bookingData.checkInDate,
 
         }, {
             typecast: true
