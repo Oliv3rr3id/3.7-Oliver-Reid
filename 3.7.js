@@ -41,6 +41,7 @@ function boatBooking(){
 			alert(costOfExtras);
 		}
 	}
+	totalCost += Number(costofReservation) + Number(costOfExtras);
 	var bookingData = {
         checkInDate: checkInDate,
         amountOfHours: amountOfHours,
@@ -51,40 +52,42 @@ function boatBooking(){
         costOfExtras: costOfExtras,
         totalCost: totalCost
     };
-
     outputSummary(bookingData);
-    return bookingData;
+	return bookingData;
 }
 
-function outputSummary(bookingData){
-	document.getElementById("outDate").innerHTML = bookingData.checkInDate;
+function outputSummary(bookingData) {
+	alert("at output")
+    document.getElementById("outDate").innerHTML = bookingData.checkInDate;
     document.getElementById("outHours").innerHTML = bookingData.amountOfHours;
     document.getElementById("outTime").innerHTML = bookingData.boatTime;
     document.getElementById("outPrice").innerHTML = "$" + bookingData.costofReservation;
     document.getElementById("outExtras").innerHTML = bookingData.extrasOption.join(', ');
     document.getElementById("outExtrasPrice").innerHTML = "$" + bookingData.costOfExtras;
     document.getElementById("outTotal").innerHTML = "$" + bookingData.totalCost;
+	alert(bookingData.checkInDate);
 }
 
 function checkInputs(bookingData){
+	alert("at check inputs")
+	alert(bookingData.checkInDate);
 	 if (termsAndConditions.checked) {
         alert("Terms box is checked");
     } else {
         alert("Terms box is not checked");
         return;
     }
+	
 	var firstName = document.getElementById('firstNameInput').value;
     var lastName = document.getElementById('lastNameInput').value;
     var age = document.getElementById('ageInput').value;
 	var license = document.getElementById('licenseInput').value;
 	var cellPhone = document.getElementById('cellphoneInput').value;
 	var email = document.getElementById('emailInput').value;
-	//store all of the customer details as variables
-	alert(firstName + " " + lastName + " " + age + " " + license + " " + cellPhone + " " + email);
-	pushData(firstName, lastName, age, license, cellPhone, email, bookingData)
+	pushData(firstName, lastName, age, license, cellPhone, email)
 }
 
-function pushData(firstName, lastName, age, license, cellPhone, email, bookingData) {
+function pushData(firstName, lastName, age, license, cellPhone, email) {
     alert("At the push data function - nearly done!");
     console.log("myFunction fired.");
     console.log("Getting Values....");
@@ -100,9 +103,8 @@ function pushData(firstName, lastName, age, license, cellPhone, email, bookingDa
 			"Age": age,
 			"License": license,
 			"Cell Phone": cellPhone,
-			"Email": email,
-			"Check In Date": bookingData.checkInDate,
-
+			"Email": email
+		
         }, {
             typecast: true
         },
