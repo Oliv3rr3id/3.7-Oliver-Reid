@@ -1,76 +1,63 @@
 // JavaScript Document
 alert("js attatached");
-var totalCost = 0;
+var totalCost = 0;//creates a total cost varable
 
-function boatBooking(){
-	var checkInDate = document.getElementById("dateInput").value;
-	if (document.getElementById("dateInput").validity.valueMissing) {
-		alert("Please enter a valid first name");
-		document.getElementById("errorMessage1").innerHTML = "Please enter a valid date";
+function boatBooking(){//this function checks for booking information
+	var checkInDate = document.getElementById("dateInput").value;//makes variable from the users selected date 
+	if (document.getElementById("dateInput").validity.valueMissing) {//checks validity of input
+		alert("Please enter a valid date");;//error message to inform users
+		document.getElementById("errorMessage1").innerHTML = "Please enter a valid date";//prints error message to further inform user
 		return;
-	} else {
-		document.getElementById("errorMessage2").innerHTML = "";
-	}var amountOfHours = document.getElementById("hoursInput").value;
-	if (document.getElementById("hoursInput").validity.valueMissing ||document.getElementById("hoursInput").validity.rangeUnderflow ||document.getElementById("hoursInput").validity.rangeOverflow) {
-		alert("Please enter a valid amount");
-		document.getElementById("errorMessage2").innerHTML = "Please enter a valid amount of hours";
-		return;
-	} else {
-		document.getElementById("errorMessage3").innerHTML = "";
-	}var amountofGuests = document.getElementById("guestInput").value;
-	if (document.getElementById("guestInput").validity.valueMissing ||document.getElementById("guestInput").validity.rangeUnderflow ||document.getElementById("guestInput").validity.rangeOverflow) {
-		alert("Please enter a valid amount");
-		document.getElementById("errorMessage3").innerHTML = "Please enter a valid amount of hours";
-		return;
-	} else {
-		document.getElementById("errorMessage3").innerHTML = "";
-	}var costofReservation = this.dataset.price;
-	alert(costofReservation);
+	} else {//allows the code to movie forwards if input is corrected
+		document.getElementById("errorMessage1").innerHTML = "";//removes error message if input is correct
+	}
 	
-	var boatTime = this.dataset.value;
-	alert(boatTime);
+	var amountOfHours = document.getElementById("hoursInput").value;//makes variable from users selected duration
+	if (document.getElementById("hoursInput").validity.valueMissing ||document.getElementById("hoursInput").validity.rangeUnderflow ||document.getElementById("hoursInput").validity.rangeOverflow) {//checks validity of input
+		alert("Please enter a valid amount");//error message to inform users
+		document.getElementById("errorMessage2").innerHTML = "Please enter a valid amount of hours";//prints error message to further inform user
+		return;
+	} else {//allows the code to movie forwards if input is corrected
+		document.getElementById("errorMessage3").innerHTML = "";//removes error message if input is correct
+	}
 	
-	extrasOption = [];
+	var amountofGuests = document.getElementById("guestInput").value;//makes variable from users selected amount of guests
+	if (document.getElementById("guestInput").validity.valueMissing ||document.getElementById("guestInput").validity.rangeUnderflow ||document.getElementById("guestInput").validity.rangeOverflow) {//checks validity of input
+		alert("Please enter a valid amount");//error message to inform users
+		document.getElementById("errorMessage3").innerHTML = "Please enter a valid amount of guests";//prints error message to further inform user
+		return;
+	} else {//allows the code to movie forwards if input is corrected
+		document.getElementById("errorMessage3").innerHTML = "";
+	}
+	
+	var costofReservation = this.dataset.price;//makes variable from the price of the users selected boating time
+	var boatTime = this.dataset.value;//makes variable from the users selected boating time
+	
+	extrasOption = [];//stores extra options
 	var addExtras = document.getElementsByClassName("extrasCheckbox");
-	var costOfExtras = 0;
+	var costOfExtras = 0;//creates a extras cost varable
 	for (i = 0; i < addExtras.length; i++) {
 		if (addExtras[i].checked) {
 			extrasOption.push(addExtras[i].parentNode.textContent.trim());
 			costOfExtras += Number(addExtras[i].dataset.price);
 			alert(extrasOption);
-			alert(costOfExtras);
+	
 		}
 	}
 	totalCost += Number(costofReservation) + Number(costOfExtras);
-	var bookingData = {
-        checkInDate: checkInDate,
-        amountOfHours: amountOfHours,
-        amountofGuests: amountofGuests,
-        boatTime: boatTime,
-        costofReservation: costofReservation,
-        extrasOption: extrasOption,
-        costOfExtras: costOfExtras,
-        totalCost: totalCost
-    };
-    outputSummary(bookingData);
-	return bookingData;
+	outDate.innerHTML = checkInDate;
+	outHours.innerHTML = amountOfHours;
+	outTime.innerHTML = boatTime;
+	outPrice.innerHTML = "$" + costofReservation;
+	outExtras.innerHTML = extrasOption;
+	outExtrasPrice.innerHTML = "$" + costOfExtras;
+	outTotal.innerHTML = "$" + totalCost
+
 }
 
-function outputSummary(bookingData) {
-	alert("at output")
-    document.getElementById("outDate").innerHTML = bookingData.checkInDate;
-    document.getElementById("outHours").innerHTML = bookingData.amountOfHours;
-    document.getElementById("outTime").innerHTML = bookingData.boatTime;
-    document.getElementById("outPrice").innerHTML = "$" + bookingData.costofReservation;
-    document.getElementById("outExtras").innerHTML = bookingData.extrasOption.join(', ');
-    document.getElementById("outExtrasPrice").innerHTML = "$" + bookingData.costOfExtras;
-    document.getElementById("outTotal").innerHTML = "$" + bookingData.totalCost;
-	alert(bookingData.checkInDate);
-}
-
-function checkInputs(bookingData){
+function checkInputs(){
 	alert("at check inputs")
-	alert(bookingData.checkInDate);
+	//alert(bookingData.checkInDate);
 	 if (termsAndConditions.checked) {
         alert("Terms box is checked");
     } else {
@@ -103,8 +90,14 @@ function pushData(firstName, lastName, age, license, cellPhone, email) {
 			"Age": age,
 			"License": license,
 			"Cell Phone": cellPhone,
-			"Email": email
-		
+			"Email": email,
+			"Check in Date": outDate.innerHTML,
+			"Amount of Hours": outHours.innerHTML,
+			"Time": outTime.innerHTML,
+			"Cost of Reservation": outPrice.innerHTML,
+			"Extras Options": outExtras.innerHTML,
+			"Cost of Extras": outExtrasPrice.innerHTML,
+			"Total Cost": outTotal.innerHTML
         }, {
             typecast: true
         },
@@ -116,6 +109,7 @@ function pushData(firstName, lastName, age, license, cellPhone, email) {
             alert("record created");
             console.log("Record created: " + record.getId());
         });
+	
 }
 
 var card = document.getElementsByClassName("card");
