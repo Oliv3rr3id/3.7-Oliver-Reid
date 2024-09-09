@@ -44,7 +44,8 @@ function boatBooking(){//this function checks for booking information
 	
 		}
 	}
-	totalCost += Number(costofReservation) + Number(costOfExtras);
+	
+	totalCost += Number(costofReservation) + Number(costOfExtras);//makes variable from adding all the costs together to get total costprice of all users costs
 	outDate.innerHTML = checkInDate;
 	outHours.innerHTML = amountOfHours;
 	outTime.innerHTML = boatTime;
@@ -66,11 +67,52 @@ function checkInputs(){
     }
 	
 	var firstName = document.getElementById('firstNameInput').value;
+	if (document.getElementById("firstNameInput").validity.patternMismatch || document.getElementById("firstNameInput").validity.valueMissing) {
+		alert("Please enter a valid first name");
+		document.getElementById("errorMessage4").innerHTML = "Please enter a valid first name";
+		return;
+	} else {
+		document.getElementById("errorMessage4").innerHTML = "";
+	}
+	
     var lastName = document.getElementById('lastNameInput').value;
+	if (document.getElementById("lastNameInput").validity.patternMismatch || document.getElementById("lastNameInput").validity.valueMissing) {
+		alert("Please enter a valid last name");
+		document.getElementById("errorMessage5").innerHTML = "Please enter a valid last name";
+		return;
+	} else {
+		document.getElementById("errorMessage5").innerHTML = "";
+	}
+	
     var age = document.getElementById('ageInput').value;
+	if (document.getElementById("ageInput").validity.valueMissing ||document.getElementById("ageInput").validity.rangeUnderflow ||document.getElementById("ageInput").validity.rangeOverflow){
+		alert("Please enter a valid age");
+		document.getElementById("errorMessage6").innerHTML = "Please enter a valid age";
+		return;
+	} else {
+		document.getElementById("errorMessage6").innerHTML = "";
+	}
+	
 	var license = document.getElementById('licenseInput').value;
+	if (document.getElementById("licenseInput").validity.patternMismatch || document.getElementById("licenseInput").validity.valueMissing) {
+		alert("Please enter a valid license");
+		document.getElementById("errorMessage7").innerHTML = "Please enter a valid license";
+		return;
+	} else {
+		document.getElementById("errorMessage7").innerHTML = "";
+	}
+	
 	var cellPhone = document.getElementById('cellphoneInput').value;
+
 	var email = document.getElementById('emailInput').value;
+	if (document.getElementById("licenseInput").validity.patternMismatch || document.getElementById("licenseInput").validity.valueMissing) {
+		alert("Please enter a valid email");
+		document.getElementById("errorMessage9").innerHTML = "Please enter a valid email";
+		return;
+	} else {
+		document.getElementById("errorMessage9").innerHTML = "";
+	}
+	
 	pushData(firstName, lastName, age, license, cellPhone, email)
 }
 

@@ -107,18 +107,23 @@
 		</table><br>
 		
 		<br><h2>Your Personal Details</h2><br>
-		<label>Enter in your First Name<input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br>
-		<br>
-		<label>Enter in your First Name<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Smith" title="Please enter in your first name"></label><br>
-		<br>
+		<label>Enter in your first name<input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br>  
+		<div id="errorMessage4" class="errorMessages"></div><br>
+		
+		<label>Enter in your last name<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Smith" title="Please enter in your first name"></label><br>
+		<div id="errorMessage5" class="errorMessages"></div><br>
+		
 		<label>Enter in your age: you must be at least 25 years of age<input id="ageInput" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in your phone number"></label><br>
-		<br>
+		<div id="errorMessage6" class="errorMessages"></div><br>
+		
 		<label>Enter in your Nz drivers license: two capital letters and six numbers<input id="licenseInput" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
-		<br>
+		<div id="errorMessage7" class="errorMessages"></div><br>
+		
 		<label>Enter in your phone number<input id="cellphoneInput" required="" type="number" placeholder="027XXXXXX"  title="Please enter in your phone number"></label><br>
-		<br>
+		<div id="errorMessage8" class="errorMessages"></div><br>
+		
 		<label>Enter in your email address: one @</label><input id="emailInput" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address" >
-		<br>
+		<div id="errorMessage9" class="errorMessages"></div><br>
 		
 	<br><h2>Do you agree to our terms and conditions?</h2><br>
 	<input id="termsAndConditions" type="checkbox"><br>
