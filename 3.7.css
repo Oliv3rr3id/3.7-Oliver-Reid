@@ -1,7 +1,94 @@
 @charset "utf-8";
 /* CSS Document */
 
+.topnav img {
+	float: left;
+	height: 60px;
+	width: auto;
+	padding: 1px 0px 1px 1px;
+	margin-left: 10%;
+}
+.topnav {
+	overflow: hidden;
+	background-color: lightslategrey;
+	border: 2px solid black;
+	opacity: 0.85;
+	width: 100%;
+    border-radius: 5px;
+}
 
+.topnav .icon {
+	display: none;
+}
+
+.parallax {
+	/* The image used */
+	background-image: url("images/seascape.jpg");
+	/* Set a specific height */
+	min-height: 300px;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Styles the footer*/
+footer {
+	background-color: lightslategrey;
+	text-align: center;
+	border: 2px solid black;
+	opacity: 0.85;
+	width: 100%;
+	margin: 20px auto;
+    border-radius: 5px;
+}
+
+footer p {
+	color: black;
+	text-decoration: none;
+	font-size: 100%;
+	margin: 3%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 #termsAndConditions{
 	height: 40px;
@@ -59,6 +146,30 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+}
+
+#mySelect {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-size: 14px;
+            color: #333;
+            appearance: none; /* Removes default dropdown arrow in some browsers */
+            cursor: pointer;
+			margin-top: 0.7%;
+        }
+
+        /* Add hover effect */
+        #mySelect:hover {
+            border-color: #45a049;
+        }
+
+        /* Style individual options */
+        #mySelect option {
+            background-color: #fff;
+            color: #333;
 }
 
 .errorMessages{

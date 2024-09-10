@@ -7,7 +7,12 @@
 </head>
 
 <body>
+	<div class="topnav" id="myTopnav">
+		<img alt="boat_logo" src="images/distinctive_charters.png"> 
+		</div>
+	<div class="parallax"></div>
 	<div class="container">
+		
 		<h2>Your Booking Details</h2><br>
 		<label>Enter the pick up date:</label><input id="dateInput" required=""  type="date"><br>
 		<div class="errorMessages" id="errorMessage1"></div><br>
@@ -18,7 +23,14 @@
 		<label>Enter the amount of attenders: you must choose between 1 and 50</label><input id="guestInput" max="50" min="1" required="" type="number" placeholder="23"><br>
 		<div class="errorMessages" id="errorMessage3"></div><br>
 		
-		<label>Enter the occasion for booking<input id="reasonInput" autocomplete="given-name"  required="" type="text" placeholder="Wedding Celebration"></label><br>
+		<label>Enter the reason for booking</label>
+		<select id="mySelect">
+		<option value="Wedding">Wedding</option>
+		<option value="Birthday Celebration">Birthday</option>
+		<option value="Graduation">Graduation</option>
+		<option value="Anniversary">Anniversary</option>
+		<option value="Christmas function">Christmas function</option>
+		</select><br>
 		
 		<br><h2>Your Extras</h2><br>
 		<label class="container"><input class="extrasCheckbox" data-price="2000" type="checkbox"> Unlimited Drinks Package $2000</label><span class="checkmark"></span><br>
@@ -103,33 +115,51 @@
 						<div id="outTotal"></div>
 					</td>
 				</tr>
+				<tr>
+					<td>Reason for Reservation</td>
+					<td>
+						<div id="outReason"></div>
+					</td>
+				</tr>
 			</tbody>
 		</table><br>
 		
 		<br><h2>Your Personal Details</h2><br>
-		<label>Enter in your first name<input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br>  
-		<div id="errorMessage4" class="errorMessages"></div><br>
-		
-		<label>Enter in your last name<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,10}" required="" type="text" placeholder="Smith" title="Please enter in your first name"></label><br>
-		<div id="errorMessage5" class="errorMessages"></div><br>
-		
-		<label>Enter in your age: you must be at least 25 years of age<input id="ageInput" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in your phone number"></label><br>
-		<div id="errorMessage6" class="errorMessages"></div><br>
-		
-		<label>Enter in your Nz drivers license: two capital letters and six numbers<input id="licenseInput" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your phone number"></label><br>
-		<div id="errorMessage7" class="errorMessages"></div><br>
-		
-		<label>Enter in your phone number<input id="cellphoneInput" required="" type="number" placeholder="027XXXXXX"  title="Please enter in your phone number"></label><br>
-		<div id="errorMessage8" class="errorMessages"></div><br>
-		
-		<label>Enter in your email address: one @</label><input id="emailInput" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address" >
-		<div id="errorMessage9" class="errorMessages"></div><br>
+<label>Enter in your first name: min of 2 digits and max of 16 digits<input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,16}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br>  
+<div id="errorMessage4" class="errorMessages"></div><br>
+
+<label>Enter in your last name: min of 2 digits and max of 16 digits<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,16}" required="" type="text" placeholder="Smith" title="Please enter in your last name"></label><br>
+<div id="errorMessage5" class="errorMessages"></div><br>
+
+<label>Enter in your age: you must be at least 25 years of age<input id="ageInput" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in age"></label><br>
+<div id="errorMessage6" class="errorMessages"></div><br>
+
+<label>Enter in your Nz drivers license: two capital letters and six numbers<input id="licenseInput" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your drivers license"></label><br>
+<div id="errorMessage7" class="errorMessages"></div><br>
+
+<label>Enter your phone number: min of 10 digits and max of 15 digits<input id="cellphoneInput" type="tel" pattern="[0-9]{10,15}" minlength="10" maxlength="15" required="" placeholder="027XXXXXX" title="Please enter your phone number"></label><br>
+        <div id="errorMessage8" class="errorMessages"></div><br>
+
+<label>Enter in your email address: one @</label><input id="emailInput" pattern=".*@.*" minlength="3" maxlength="64" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address" >
+<div id="errorMessage9" class="errorMessages"></div><br>
 		
 	<br><h2>Do you agree to our terms and conditions?</h2><br>
 	<input id="termsAndConditions" type="checkbox"><br>
 	<br>
 	<br><button class="submitButton" onclick="checkInputs()" type="button">Submit Reservation</button>
 	</div>
+	
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Your form has been stored</p>
+  </div>
+</div>
+	
+<footer>
+	<p>Website developed and maintained by Oliver Reid</p><!-- Creates footer -->
+</footer><!-- Ends footer -->
 	
 	<script src="airtable.browser.js"></script>
 	<script src="3.7.js"></script>
