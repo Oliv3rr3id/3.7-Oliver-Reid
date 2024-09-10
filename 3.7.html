@@ -8,9 +8,9 @@
 
 <body>
 	<div class="topnav" id="myTopnav">
-		<img alt="boat_logo" src="images/distinctive_charters.png"> 
-		</div>
-	<div class="parallax"></div>
+		<img alt="boat_logo" src="images/distinctive_charters.png"><p>Distinctive Charters</p>
+	</div>
+	<div class="parallax" ></div>
 	<div class="container">
 		
 		<h2>Your Booking Details</h2><br>
@@ -29,7 +29,9 @@
 		<option value="Birthday Celebration">Birthday</option>
 		<option value="Graduation">Graduation</option>
 		<option value="Anniversary">Anniversary</option>
-		<option value="Christmas function">Christmas function</option>
+		<option value="Christmas function">Christmas Function</option>
+		<option value="Corporate Event">Corporate Event</option>
+		<option value="Other">Other</option>
 		</select><br>
 		
 		<br><h2>Your Extras</h2><br>
@@ -52,19 +54,19 @@
 		<div class="row">
 			<div class="column">
 				<div class="card" data-price="249" data-value="11am Brunch Charter">
-					<h3> 11am Brunch Charter</h3><img src="images/brunch_charter.jpg">
+					<h3> 11am Brunch Charter</h3><img alt="evening" src="images/brunch_charter.jpg">
 					<p>Some text</p><button class="bookBoat" type="button">Book Boat</button>
 				</div>
 			</div>
 			<div class="column">
 				<div class="card" data-price="289" data-value="3pm Afternoon Delight">
-					<h3> 3pm Afternoon Delight</h3><img src="images/day time.jpg">
+					<h3> 3pm Afternoon Delight</h3><img alt="day" src="images/day time.jpg">
 					<p>Some text</p><button class="bookBoat" type="button">Book Boat</button>
 				</div>
 			</div>
 			<div class="column">
 				<div class="card" data-price="329" data-value="7pm Sunset Sailin">
-					<h3> 7pm Sunset Sailing</h3><img src="images/night.jpg">
+					<h3> 7pm Sunset Sailing</h3><img alt="night" src="images/night.jpg">
 					<p>Some text</p><button class="bookBoat" type="button">Book Boat</button>
 				</div>
 			</div>
@@ -121,6 +123,12 @@
 						<div id="outReason"></div>
 					</td>
 				</tr>
+				<tr>
+					<td>Amount of Guests</td>
+					<td>
+						<div id="outGuests"></div>
+					</td>
+				</tr>
 			</tbody>
 		</table><br>
 		
@@ -142,6 +150,10 @@
 
 <label>Enter in your email address: one @</label><input id="emailInput" pattern=".*@.*" minlength="3" maxlength="64" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address" >
 <div id="errorMessage9" class="errorMessages"></div><br>
+
+	
+<br><label>Enter in a comment for feedback: only if you want to</label><input id="commentInput" maxlength="600" type="text" placeholder="I think that..." title="Please enter in a comment" >
+		
 		
 	<br><h2>Do you agree to our terms and conditions?</h2><br>
 	<input id="termsAndConditions" type="checkbox"><br>

@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+h2 {
+  text-align: center;
+}
+
+
 .topnav img {
 	float: left;
 	height: 60px;
@@ -8,6 +13,14 @@
 	padding: 1px 0px 1px 1px;
 	margin-left: 10%;
 }
+
+.topnav p{
+	padding-left: 40%;
+	font-size: 20px;
+    font-weight: bold;
+
+}
+
 .topnav {
 	overflow: hidden;
 	background-color: lightslategrey;
@@ -91,6 +104,12 @@ footer p {
 }
 
 #termsAndConditions{
+	height: 40px;
+	width: 40px;
+	padding-left: 20%
+}
+
+.extrasCheckbox{
 	height: 40px;
 	width: 40px;
 }
@@ -218,6 +237,29 @@ textarea {
   background-color: #f1f1f1;
   width: 200px;
   align-content: center;
+}
+
+/* Style the container for the cards */
+.row {
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of columns */
+  justify-content: center; /* Center columns horizontally */
+  gap: 20px; /* Space between columns */
+}
+
+/* Center cards within each column */
+.column {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center card horizontally */
+  align-items: center; /* Center card vertically */
+  margin-bottom: 20px; /* Space between rows of cards */
+}
+
+/* Center content within each card */
+.card {
+  text-align: center; /* Center text within card */
+  width: 100%; /* Ensure card takes full width of its column */
+  max-width: 300px; /* Optional: restrict max width of card */
 }
 
 .card img{

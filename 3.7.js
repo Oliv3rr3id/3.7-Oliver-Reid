@@ -5,6 +5,7 @@ var btn = document.getElementById("myBtn"); // Get the button that opens the mod
 var span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
 
 
+
 var totalCost = 0; //creates a total cost varable
 function boatBooking() { //this function checks for booking information
 	var checkInDate = document.getElementById("dateInput").value; //makes variable from the users selected date 
@@ -31,9 +32,7 @@ function boatBooking() { //this function checks for booking information
 	} else { //allows the code to movie forwards if input is corrected
 		document.getElementById("errorMessage3").innerHTML = "";
 	}
-	
 	var reason = document.getElementById("mySelect").value;
-	
 	var costofReservation = this.dataset.price; //makes variable from the price of the users selected boating time
 	var boatTime = this.dataset.value; //makes variable from the users selected boating time
 	extrasOption = []; //stores extra options
@@ -55,7 +54,9 @@ function boatBooking() { //this function checks for booking information
 	outExtrasPrice.innerHTML = "$" + costOfExtras;
 	outTotal.innerHTML = "$" + totalCost
 	outReason.innerHTML = reason;
+	outGuests.innerHTML = amountofGuests;
 }
+
 
 
 function checkInputs() {
@@ -115,11 +116,14 @@ function checkInputs() {
 	} else {
 		document.getElementById("errorMessage9").innerHTML = "";
 	}
-	pushData(firstName, lastName, age, license, cellPhone, email)
+	var comment = document.getElementById('commentInput').value;
+	pushData(firstName, lastName, age, license, cellPhone, email, comment)
 }
 
 
-function pushData(firstName, lastName, age, license, cellPhone, email) {
+
+
+function pushData(firstName, lastName, age, license, cellPhone, email, comment) {
 	alert("At the push data function - nearly done!");
 	console.log("myFunction fired.");
 	console.log("Getting Values....");
@@ -136,6 +140,7 @@ function pushData(firstName, lastName, age, license, cellPhone, email) {
 		"License": license,
 		"Cell Phone": cellPhone,
 		"Email": email,
+		"Comment": comment,
 		"Check in Date": outDate.innerHTML,
 		"Amount of Hours": outHours.innerHTML,
 		"Time": outTime.innerHTML,
@@ -143,7 +148,8 @@ function pushData(firstName, lastName, age, license, cellPhone, email) {
 		"Extras Options": outExtras.innerHTML,
 		"Cost of Extras": outExtrasPrice.innerHTML,
 		"Total Cost": outTotal.innerHTML,
-		"Reason for Reservation": outReason.innerHTML
+		"Reason for Reservation": outReason.innerHTML,
+		"Amount of Guests": outGuests.innerHTML
 	}, {
 		typecast: true
 	}, function(err, record) {
@@ -170,6 +176,9 @@ function pushData(firstName, lastName, age, license, cellPhone, email) {
 	}, 3000); // 3000 milliseconds = 3 seconds
 	console.log("end function");
 }
+
+
+
 var card = document.getElementsByClassName("card");
 for (var i = 0; i < card.length; i++) {
 	card[i].addEventListener("click", boatBooking);
