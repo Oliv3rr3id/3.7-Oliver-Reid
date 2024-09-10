@@ -22,7 +22,7 @@ function boatBooking() { //this function checks for booking information
 		document.getElementById("errorMessage2").innerHTML = "Please enter a valid amount of hours"; //prints error message to further inform user
 		return;
 	} else { //allows the code to movie forwards if input is corrected
-		document.getElementById("errorMessage3").innerHTML = ""; //removes error message if input is correct
+		document.getElementById("errorMessage2").innerHTML = ""; //removes error message if input is correct
 	}
 	var amountofGuests = document.getElementById("guestInput").value; //makes variable from users selected amount of guests
 	if (document.getElementById("guestInput").validity.valueMissing || document.getElementById("guestInput").validity.rangeUnderflow || document.getElementById("guestInput").validity.rangeOverflow) { //checks validity of input
@@ -109,7 +109,7 @@ function checkInputs() {
 		document.getElementById("errorMessage8").innerHTML = "";
 	}
 	var email = document.getElementById('emailInput').value;
-	if (document.getElementById("licenseInput").validity.patternMismatch || document.getElementById("licenseInput").validity.valueMissing) {
+	if (document.getElementById("emailInput").validity.patternMismatch || document.getElementById("emailInput").validity.valueMissing) {
 		alert("Please enter a valid email");
 		document.getElementById("errorMessage9").innerHTML = "Please enter a valid email";
 		return;
