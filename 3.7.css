@@ -1,11 +1,30 @@
 @charset "utf-8";
 /* CSS Document */
 
-h2 {
-  text-align: center;
+/* Basic button styles */
+button {
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
+/* Makes button hover affect */
+button:hover {
+    transform: scale(1.05); /* Slightly scales up the button */
+	transition: 0.4s ease;
+	background-color: #45a049;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+/* centers titles */
+h2 {
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+/* adjusts logo */
 .topnav img {
 	float: left;
 	height: 60px;
@@ -14,26 +33,24 @@ h2 {
 	margin-left: 10%;
 }
 
-.topnav p{
-	padding-left: 40%;
+/* styles text */
+.topnav p {
+	padding-right: 15%;
 	font-size: 20px;
-    font-weight: bold;
-
+	font-weight: bold;
 }
 
+/* styles top nav */
 .topnav {
 	overflow: hidden;
 	background-color: lightslategrey;
 	border: 2px solid black;
 	opacity: 0.85;
 	width: 100%;
-    border-radius: 5px;
+	border-radius: 5px;
 }
 
-.topnav .icon {
-	display: none;
-}
-
+/* styles parallax */
 .parallax {
 	/* The image used */
 	background-image: url("images/seascape.jpg");
@@ -54,237 +71,266 @@ footer {
 	opacity: 0.85;
 	width: 100%;
 	margin: 20px auto;
-    border-radius: 5px;
+	border-radius: 5px;
 }
 
+/* styles footer text */
 footer p {
 	color: black;
 	text-decoration: none;
 	font-size: 100%;
-	margin: 3%;
+	font-weight: bold;
 }
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
 }
 
-#termsAndConditions{
-	height: 40px;
-	width: 40px;
-	padding-left: 20%
+/* styles confrim box */
+#termsAndConditions {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.extrasCheckbox{
-	height: 40px;
-	width: 40px;
+/* styles checkboxes */
+.extrasCheckbox {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-img{
-	width: 180px;
-	height: 140px;
+
+/* styles table */
+table {
+	border: 1px solid #ddd;
+	padding: 8px;
+	width: 65%;
+	margin: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	background-color: #f1f1f1;
+}
+
+/* styles body */
+body {
+	width: 70%;
+	margin: auto;
+	font-family: 'Arimo', sans-serif;
+}
+
+/* makes red if input is wrong */
+input:invalid {
+	background-color: #F4CAD9;
+	border: none;
+	outline: 2px solid red;
 	border-radius: 5px;
 }
 
-
-table{
-	border: 1px solid #ddd;
-  	padding: 8px;
-	width:60%;
-	margin:auto;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  	background-color: #f1f1f1;
-}
-
-body {
-    width: 70%;
-    margin: auto;
-    font-family: 'Arimo', sans-serif;
-}
-
-input:invalid {
-  background-color: #F4CAD9;
-  border: none;
-  outline: 2px solid red;
-  border-radius: 5px;
-}
-
+/* makes green if input is right */
 input:valid {
-  background-color: #C8FCD2;
-  border: none;
-  outline: 2px solid green;
-  border-radius: 5px;
+	background-color: #C8FCD2;
+	border: none;
+	outline: 2px solid green;
+	border-radius: 5px;
 }
 
 /* Input Styles */
-input[type=text],
-input[type=number],
-input[type=tel],
-input[type=date],
-input[type=email],
-textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+input[type=text], input[type=number], input[type=tel], input[type=date], input[type=email], textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
 
+/* styles Reason for Booking input*/
 #mySelect {
-            width: 100%;
-            padding: 12px 20px;
-            border: 2px solid #4CAF50;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            font-size: 14px;
-            color: #333;
-            appearance: none; /* Removes default dropdown arrow in some browsers */
-            cursor: pointer;
-			margin-top: 0.7%;
-        }
-
-        /* Add hover effect */
-        #mySelect:hover {
-            border-color: #45a049;
-        }
-
-        /* Style individual options */
-        #mySelect option {
-            background-color: #fff;
-            color: #333;
+	width: 100%;
+	padding: 12px 20px;
+	border: 2px solid #4CAF50;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	font-size: 14px;
+	color: #333;
+	appearance: none;
+	/* Removes default dropdown arrow in some browsers */
+	cursor: pointer;
+	margin-top: 0.7%;
 }
 
-.errorMessages{
+/* Add hover effect */
+#mySelect:hover {
+	border-color: #45a049;
+}
+
+/* Style individual options */
+#mySelect option {
+	background-color: #fff;
+	color: #333;
+}
+
+/* styles error message */
+.errorMessages {
 	text-align: right;
 	float: right;
-	color:red;
+	color: red;
 }
 
-.submitButton, bookBoat{
+/* makes buttons green*/
+.submitButton, bookBoat {
 	width: 100%;
 	height: 45px;
 	background-color: #C8FCD2;
 	border-radius: 5px;
 }
 
+/* styles main content */
 .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  font-family: 'Poppins', sans-serif;
-  place-items: center;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	font-family: 'Poppins', sans-serif;
+	place-items: center;
 }
 
 /* Float four columns side by side */
 .column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+	float: left;
+	width: 25%;
+	padding: 0 10px;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {
+	margin: 0 -5px;
+}
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-  width: 200px;
-  align-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+	width: 200px;
+	align-content: center;
 }
 
 /* Style the container for the cards */
 .row {
-  display: flex; /* Use Flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping of columns */
-  justify-content: center; /* Center columns horizontally */
-  gap: 20px; /* Space between columns */
+	display: flex;
+	/* Use Flexbox for layout */
+	flex-wrap: wrap;
+	/* Allow wrapping of columns */
+	justify-content: center;
+	/* Center columns horizontally */
+	gap: 20px;
+	/* Space between columns */
 }
 
 /* Center cards within each column */
 .column {
-  display: flex; /* Use Flexbox for layout */
-  justify-content: center; /* Center card horizontally */
-  align-items: center; /* Center card vertically */
-  margin-bottom: 20px; /* Space between rows of cards */
+	display: flex;
+	/* Use Flexbox for layout */
+	justify-content: center;
+	/* Center card horizontally */
+	align-items: center;
+	/* Center card vertically */
+	margin-bottom: 20px;
+	/* Space between rows of cards */
 }
 
 /* Center content within each card */
 .card {
-  text-align: center; /* Center text within card */
-  width: 100%; /* Ensure card takes full width of its column */
-  max-width: 300px; /* Optional: restrict max width of card */
+	text-align: center;
+	/* Center text within card */
+	width: 100%;
+	/* Ensure card takes full width of its column */
+	max-width: 300px;
+	/* Optional: restrict max width of card */
 }
 
-.card img{
+/* styles card */
+.card img {
 	width: 95%;
 }
 
+/* makes border box boundary */
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.bookBoat{
+/* styles boat booking inputs */
+.bookBoat {
 	width: 100%;
 	height: 33px;
 	background-color: #C8FCD2;
 	border: none;
-    outline: 2px solid green;
-    border-radius: 5px;
+	outline: 2px solid green;
+	border-radius: 5px;
 }
-
 
 /* Responsive columns */
 @media screen and (max-width: 900px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+	.column {
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
 }

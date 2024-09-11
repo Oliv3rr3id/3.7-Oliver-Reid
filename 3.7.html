@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>3.7.html</title>
@@ -7,158 +7,158 @@
 </head>
 
 <body>
-	<div class="topnav" id="myTopnav">
-		<img alt="boat_logo" src="images/distinctive_charters.png"><p>Distinctive Charters</p>
+	<div class="topnav" id="myTopnav"><!-- makes topnva -->
+		<img alt="boat_logo" src="images/distinctive_charters.png"><p>Distinctive<!-- gets logo -->Charters</p>
 	</div>
-	<div class="parallax" ></div>
-	<div class="container">
+	<div class="parallax" ></div><!-- gets parrallax -->
+	<div class="container"><!-- holds main content -->
 		
-		<h2>Your Booking Details</h2><br>
-		<label>Enter the pick up date:</label><input id="dateInput" required=""  type="date"><br>
-		<div class="errorMessages" id="errorMessage1"></div><br>
+		<br><h2>Your Booking Details</h2><br><!-- title -->
+		<label><p>Enter the pick up date:</p></label><input id="dateInput" required=""  type="date"><!-- makes date option --><br>
+		<div class="errorMessages" id="errorMessage1"></div><br><!-- prints error message  -->
 		
-		<label>Enter the amount of hours: you must choose between 3 and 6</label><input id="hoursInput" max="6" min="3" required="" type="number" placeholder="3"><br>
-		<div class="errorMessages" id="errorMessage2"></div><br>
+		<label><p>Enter the amount of hours: you must choose between 3 and 6</p></label><!-- title --><input id="hoursInput" max="6" min="3" required="" type="number" placeholder="3"><!-- makes hour option --><br>
+		<div class="errorMessages" id="errorMessage2"></div><br><!-- prints error message  -->
 		
-		<label>Enter the amount of attenders: you must choose between 1 and 50</label><input id="guestInput" max="50" min="1" required="" type="number" placeholder="23"><br>
-		<div class="errorMessages" id="errorMessage3"></div><br>
+		<label><p>Enter the amount of attenders: you must choose between 1 and 50</p><!-- title --></label><input id="guestInput" max="50" min="1" required="" type="number" placeholder="23"><!-- makes guest option --><br>
+		<div class="errorMessages" id="errorMessage3"></div><br><!-- prints error message  -->
 		
-		<label>Enter the reason for booking</label>
-		<select id="mySelect">
-		<option value="Wedding">Wedding</option>
-		<option value="Birthday Celebration">Birthday</option>
-		<option value="Graduation">Graduation</option>
-		<option value="Anniversary">Anniversary</option>
-		<option value="Christmas function">Christmas Function</option>
-		<option value="Corporate Event">Corporate Event</option>
+		<label><p>Enter the reason for booking</p></label><!-- title -->
+		<select id="mySelect"><!-- makes reason for booking options -->
+		<option value="Wedding">Wedding</option><!-- option 1 -->
+		<option value="Birthday Celebration">Birthday</option><!-- option 2 -->
+		<option value="Graduation">Graduation</option><!-- option 3 -->
+		<option value="Anniversary">Anniversary</option><!-- option 4 -->
+		<option value="Christmas function">Christmas Function</option><!-- option 5 -->
+		<option value="Corporate Event">Corporate Event</option><!-- option 6 -->
 		<option value="Other">Other</option>
 		</select><br>
 		
-		<br><h2>Your Extras</h2><br>
-		<label class="container"><input class="extrasCheckbox" data-price="2000" type="checkbox"> Unlimited Drinks Package $2000</label><span class="checkmark"></span><br>
-		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="350" type="checkbox"> Catered Snacks $350</label><span class="checkmark"></span><br>
-		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="350" type="checkbox"> DJ $350</label><span class="checkmark"></span><br>
-		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="50" type="checkbox"> BYO Food $50</label><span class="checkmark"></span><br>
-		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="60" type="checkbox"> Cake $60</label><span class="checkmark"></span><br>
-		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="650" type="checkbox"> Overnight Experience $650</label><span class="checkmark"></span><br>
-		<br>
-		<label class="container"><input class="extrasCheckbox" data-price="30" type="checkbox"> Fairy Lights $30</label><span class="checkmark"></span><br>
+		<br><br><h2>Your Extras</h2><br><!-- title -->
+		<label class="container"><input class="extrasCheckbox" data-price="2000" type="checkbox"><p>Unlimited Drinks Package $2000</p></label><span class="checkmark"></span>
+		
+		<label class="container"><input class="extrasCheckbox" data-price="350" type="checkbox"><p>Catered Snacks $350</p></label><span class="checkmark"></span><!-- title and checkmar -->
+		
+		<label class="container"><input class="extrasCheckbox" data-price="350" type="checkbox"><p>DJ $350</p></label><span class="checkmark"></span><!-- title and checkmar -->
+		
+		<label class="container"><input class="extrasCheckbox" data-price="50" type="checkbox"><p>BYO Food $50</p></label><span class="checkmark"></span><!-- title and checkmar -->
+		
+		<label class="container"><input class="extrasCheckbox" data-price="60" type="checkbox"><p>Cake $60</p></label><span class="checkmark"></span><!-- title and checkmar -->
+		
+		<label class="container"><input class="extrasCheckbox" data-price="650" type="checkbox"><p>Overnight Experience $650</p></label><span class="checkmark"></span><!-- title and checkmar -->
+		
+		<label class="container"><input class="extrasCheckbox" data-price="30" type="checkbox"><p>Fairy Lights $30</p></label><span class="checkmark"></span><!-- title and checkmar -->
 		<br>
 		
-		<br><h2>Reservation</h2><br>
-		<div class="row">
+		<br><h2>Reservation</h2><br><!-- title -->
+		<br><div class="row">
 			<div class="column">
-				<div class="card" data-price="249" data-value="11am Brunch Charter">
-					<h3> 11am Brunch Charter</h3><img alt="evening" src="images/brunch_charter.jpg">
-					<p>Some text</p><button class="bookBoat" type="button">Book Boat</button>
+				<div class="card" data-price="249" data-value="11am Brunch Charter"><!-- makes card -->
+					<h3> 11am Brunch Charter $249</h3><!-- title and checkmark --><img alt="evening" src="images/brunch_charter.jpg"><br><!-- gets image -->
+					<br><button class="bookBoat" type="button">Book Boat</button><!-- makes button -->
 				</div>
 			</div>
 			<div class="column">
-				<div class="card" data-price="289" data-value="3pm Afternoon Delight">
-					<h3> 3pm Afternoon Delight</h3><img alt="day" src="images/day time.jpg">
-					<p>Some text</p><button class="bookBoat" type="button">Book Boat</button>
+				<div class="card" data-price="289" data-value="3pm Afternoon Delight"><!-- makes card -->
+					<h3> 3pm Afternoon Delight $289</h3><!-- title and checkmark --><img alt="day" src="images/day_time.jpg"><br><!-- gets image -->
+					<br><button class="bookBoat" type="button">Book Boat</button><!-- makes button -->
 				</div>
 			</div>
 			<div class="column">
-				<div class="card" data-price="329" data-value="7pm Sunset Sailin">
-					<h3> 7pm Sunset Sailing</h3><img alt="night" src="images/night.jpg">
-					<p>Some text</p><button class="bookBoat" type="button">Book Boat</button>
+				<div class="card" data-price="329" data-value="7pm Sunset Sailin"><!-- makes card -->
+					<h3> 7pm Sunset Sailing $329</h3><!-- title and checkmark --><img alt="night" src="images/night.jpg"><br><!-- gets image -->
+					<br><button class="bookBoat" type="button">Book Boat</button><!-- makes button -->
 				</div>
 			</div>
 		</div><br>
 		
-		<br><h2>Reservation Summary</h2><br>
-		<table>
+		<br><h2>Reservation Summary</h2><br><!-- title -->
+		<br><table><!-- makes table -->
 			<tr>
-				<td>Pick up Date</td>
+				<td>Pick up Date</td><!-- title -->
 				<td>
-					<div id="outDate"></div>
+					<div id="outDate"></div><!-- outs user input -->
 				</td>
 			</tr>
 			<tbody>
 				<tr>
-					<td>Amount of Hours</td>
+					<td>Amount of Hours</td><!-- title -->
 					<td>
-						<div id="outHours"></div>
+						<div id="outHours"></div><!-- outs user input -->
 					</td>
 				</tr>
 				<tr>
-					<td>Reservation</td>
+					<td>Reservation</td><!-- title -->
 					<td>
-						<div id="outTime"></div>
+						<div id="outTime"></div><!-- outs user input -->
 					</td>
 				</tr>
 				<tr>
-					<td>Cost of Reservation</td>
+					<td>Cost of Reservation</td><!-- title -->
 					<td>
-						<div id="outPrice"></div>
+						<div id="outPrice"></div><!-- outs user input -->
 					</td>
 				</tr>
 				<tr>
-					<td>Extras</td>
+					<td>Extras</td><!-- title -->
 					<td>
-						<div id="outExtras"></div>
+						<div id="outExtras"></div><!-- outs user input -->
 					</td>
 				</tr>
 				<tr>
-					<td>Cost of Extras</td>
+					<td>Cost of Extras</td><!-- title -->
 					<td>
-						<div id="outExtrasPrice"></div>
+						<div id="outExtrasPrice"></div><!-- outs user input -->
 					</td>
 				</tr>
 				<tr>
-					<td>Cost of Entier Reservation</td>
+					<td>Cost of Entier Reservation</td><!-- title -->
 					<td>
-						<div id="outTotal"></div>
+						<div id="outTotal"></div><!-- outs user input -->
 					</td>
 				</tr>
 				<tr>
-					<td>Reason for Reservation</td>
+					<td>Reason for Reservation</td><!-- title -->
 					<td>
-						<div id="outReason"></div>
+						<div id="outReason"></div><!-- outs user input -->
 					</td>
 				</tr>
 				<tr>
-					<td>Amount of Guests</td>
+					<td>Amount of Guests</td><!-- title -->
 					<td>
-						<div id="outGuests"></div>
+						<div id="outGuests"></div><!-- outs user input -->
 					</td>
 				</tr>
 			</tbody>
 		</table><br>
 		
-		<br><h2>Your Personal Details</h2><br>
-<label>Enter in your first name: min of 2 digits and max of 16 digits<input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,16}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br>  
-<div id="errorMessage4" class="errorMessages"></div><br>
+<br><h2>Your Personal Details</h2><br><!-- title -->
+<label><p>Enter in your first name: min of 2 digits and max of 16 digits</p><input id="firstNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,16}" required="" type="text" placeholder="John" title="Please enter in your first name"></label><br><!-- title and name input --> 
+<div id="errorMessage4" class="errorMessages"></div><br><!-- prints error message  -->
 
-<label>Enter in your last name: min of 2 digits and max of 16 digits<input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,16}" required="" type="text" placeholder="Smith" title="Please enter in your last name"></label><br>
-<div id="errorMessage5" class="errorMessages"></div><br>
+<label><p>Enter in your last name: min of 2 digits and max of 16 digits</p><input id="lastNameInput" autocomplete="given-name" pattern="[A-Za-z\-']{2,16}" required="" type="text" placeholder="Smith" title="Please enter in your last name"></label><br><!-- title and name input -->
+<div id="errorMessage5" class="errorMessages"></div><br><!-- prints error message  -->
 
-<label>Enter in your age: you must be at least 25 years of age<input id="ageInput" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in age"></label><br>
-<div id="errorMessage6" class="errorMessages"></div><br>
+<label><p>Enter in your age: you must be at least 25 years of age</p><input id="ageInput" min="25" max="130" required="" type="number" placeholder="25" title="Please enter in age"></label><br><!-- title and name input -->
+<div id="errorMessage6" class="errorMessages"></div><br><!-- prints error message  -->
 
-<label>Enter in your Nz drivers license: two capital letters and six numbers<input id="licenseInput" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your drivers license"></label><br>
-<div id="errorMessage7" class="errorMessages"></div><br>
+<label><p>Enter in your Nz drivers license: two capital letters and six numbers</p><input id="licenseInput" pattern="[A-Z]{2}[0-9]{6}" required="" type="text" placeholder="ABXXXXXX" title="Please enter in your drivers license"></label><br><!-- title and name input -->
+<div id="errorMessage7" class="errorMessages"></div><br><!-- prints error message  -->
 
-<label>Enter your phone number: min of 10 digits and max of 15 digits<input id="cellphoneInput" type="tel" pattern="[0-9]{10,15}" minlength="10" maxlength="15" required="" placeholder="027XXXXXX" title="Please enter your phone number"></label><br>
-        <div id="errorMessage8" class="errorMessages"></div><br>
+<label><p>Enter your phone number: min of 10 digits and max of 15 digits</p><input id="cellphoneInput" type="tel" pattern="[0-9]{10,15}" minlength="10" maxlength="15" required="" placeholder="027XXXXXX" title="Please enter your phone number"></label><br><!-- title and name input -->
+<div id="errorMessage8" class="errorMessages"></div><br><!-- prints error message  -->
 
-<label>Enter in your email address: one @</label><input id="emailInput" pattern=".*@.*" minlength="3" maxlength="64" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address" >
-<div id="errorMessage9" class="errorMessages"></div><br>
+<label><p>Enter in your email address: one @</p></label><input id="emailInput" pattern=".*@.*" minlength="3" maxlength="64" autocomplete="on" required="" type="email" placeholder="Johnsmith@gmail.com" title="Please enter in your email address"><!-- title and name input -->
+<div id="errorMessage9" class="errorMessages"></div><br><!-- prints error message  -->
 
 	
-<br><label>Enter in a comment for feedback: only if you want to</label><input id="commentInput" maxlength="600" type="text" placeholder="I think that..." title="Please enter in a comment" >
+<br><label><p>Enter in a comment for feedback: only if you want to</p></label><input id="commentInput" maxlength="600" type="text" placeholder="I think that..." title="Please enter in a comment" ><br>
 		
 		
-	<br><h2>Do you agree to our terms and conditions?</h2><br>
-	<input id="termsAndConditions" type="checkbox"><br>
+	<br><h2>Do you agree to our terms and conditions?</h2><br><!-- title -->
+	<input id="termsAndConditions" type="checkbox"><br><!-- makes checkbox -->
 	<br>
-	<br><button class="submitButton" onclick="checkInputs()" type="button">Submit Reservation</button>
+	<br><button class="submitButton" onclick="checkInputs()" type="button">Submit Reservation</button><!-- makes submit button -->
 	</div>
 	
 <!-- The Modal -->
@@ -169,12 +169,13 @@
   </div>
 </div>
 	
-<footer>
-	<p>Website developed and maintained by Oliver Reid</p><!-- Creates footer -->
+<footer><!-- makes footer -->
+	<h5>Website developed and maintained by Oliver Reid</h5><!-- Creates footer -->
+	<p>© 2024 Distinctive Charters. All rights reserved</p>
 </footer><!-- Ends footer -->
 	
-	<script src="airtable.browser.js"></script>
-	<script src="3.7.js"></script>
+	<script src="airtable.browser.js"></script><!-- link to js for airtable -->
+	<script src="3.7.js"></script><!-- link to my js -->
 </body>
 	
 </html>
